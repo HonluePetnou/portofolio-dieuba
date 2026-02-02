@@ -70,12 +70,12 @@ export function HeroSection() {
             className="relative flex justify-center items-center"
           >
             {/* Abstract Background Shapes */}
-            <div className="absolute w-[400px] h-[400px] bg-brand-blue/10 rounded-full animate-pulse" />
-            <div className="absolute w-[350px] h-[350px] bg-brand-orange/10 rounded-full translate-x-10 translate-y-10" />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-blue/80 rounded-full animate-pulse" />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-brand-orange/90 rounded-full" />
 
             {/* Profile Image Container */}
-            <div className="relative z-10 w-[350px] lg:w-[420px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500 glass-panel p-2">
-              <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-gray-200">
+            <div className="relative z-10 w-[350px] lg:w-[420px] aspect-4/5 rounded-[2rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500 glass-panel p-2">
+              <div className="w-full h-full">
                 <Image
                   src="/Branding-images/01-Master-Class.png"
                   alt="Fredy Dieuba"

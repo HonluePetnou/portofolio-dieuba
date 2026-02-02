@@ -11,41 +11,42 @@ const projects = [
     category: "Agence Événementielle",
     description:
       "Maximiser la performance d'équipe par des packages d'épanouissement.",
-    image: "/Branding-images/02MASTER_CLASS2.png",
+    image: "/part-logo/FUNIFY.png",
   },
   {
     title: "NEW SOLUTION STYLE (NSS)",
     category: "Branding & Couture",
     description:
       "Branding complet pour un atelier de haute couture et modélisme.",
-    image: "/Branding-images/04.png",
+    image: "/part-logo/new-solution-style.jpg",
   },
   {
     title: "HMA4S.ATE",
     category: "Stratégie ONG",
     description:
       "Stratégie de communication digitale pour une ONG dédiée au développement.",
-    image: "/Branding-images/06.png",
+    image: "/part-logo/HMA4s.ate.jpeg",
   },
   {
-    title: "ELITE TRADING",
-    category: "Identité Visuelle",
+    title: "TRAVELAS",
+    category: "Agence de Voyage",
     description:
-      "Identité visuelle et design d'E-books pour la gestion de capitaux.",
-    image: "/Branding-images/07.png",
+      "Identité visuelle et branding pour une agence de voyage moderne.",
+    image: "/part-logo/TRAVELAS.jpg",
   },
   {
     title: "NEW SAMUEL SHOP ONLINE",
     category: "E-commerce Fashion",
     description:
       "Branding & Identité Visuelle pour une boutique en ligne tendance.",
-    image: "/Branding-images/08.png",
+    image: "/part-logo/NSSO.png",
   },
   {
-    title: "SOCIAL MEDIA & ADS",
-    category: "Campagnes Publicitaires",
-    description: "Interventions graphiques pour diverses marques et campagnes.",
-    image: "/Branding-images/09.png",
+    title: "OPTIMA",
+    category: "Identité Visuelle",
+    description:
+      "Création de logo et identité visuelle pour une marque premium.",
+    image: "/part-logo/optima-logo.png",
   },
 ];
 
@@ -82,7 +83,7 @@ export function ProjectsSection() {
               transition={{ delay: index * 0.1 }}
               className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-brand-orange/20"
             >
-              <div className="relative h-[250px] w-full bg-gray-200 overflow-hidden">
+              <div className="relative h-[250px] w-full bg-gray-200 overflow-hidden border-b border-gray-900">
                 <Image
                   src={project.image}
                   alt={project.title}
