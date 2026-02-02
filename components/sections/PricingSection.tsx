@@ -87,10 +87,15 @@ export function PricingSection() {
           {plans.map((plan, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                delay: index * 0.1,
+                duration: 0.6,
+                ease: [0.21, 0.47, 0.32, 0.98],
+              }}
+              whileHover={plan.highlight ? { scale: 1.07, y: -5 } : { y: -10 }}
               className={`relative rounded-3xl p-8 border ${
                 plan.highlight
                   ? "border-brand-navy shadow-2xl scale-105 z-10"
@@ -98,30 +103,41 @@ export function PricingSection() {
               } ${plan.color} transition-all duration-300`}
             >
               {plan.highlight && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-orange text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: -12 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                  className="absolute top-0 left-1/2 -translate-x-1/2 bg-brand-orange text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg z-20 animate-glow"
+                >
                   {plan.tag}
-                </div>
+                </motion.div>
               )}
 
               <div className="mb-6">
-                <h3
+                <motion.h3
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
                   className={`text-xl font-bold ${plan.highlight ? "text-white" : "text-brand-navy"}`}
                 >
                   {plan.name}
-                </h3>
-                <p
+                </motion.h3>
+                <div
                   className={`text-sm font-medium opacity-80 ${plan.highlight ? "text-gray-300" : "text-brand-orange"}`}
                 >
                   {plan.subtitle}
-                </p>
+                </div>
               </div>
 
               <div className="mb-6">
-                <div
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.4 + index * 0.1, type: "spring" }}
                   className={`text-3xl font-bold ${plan.highlight ? "text-white" : "text-brand-navy"}`}
                 >
                   {plan.price}
-                </div>
+                </motion.div>
                 <div
                   className={`text-sm ${plan.highlight ? "text-gray-300" : "text-gray-500"}`}
                 >
@@ -137,7 +153,13 @@ export function PricingSection() {
 
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
+                  <motion.li
+                    key={i}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.5 + index * 0.1 + i * 0.05 }}
+                    className="flex items-start gap-3"
+                  >
                     <div
                       className={`mt-0.5 w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${
                         plan.highlight
@@ -152,19 +174,21 @@ export function PricingSection() {
                     >
                       {feature}
                     </span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
 
-              <button
-                className={`w-full py-3 rounded-full font-bold transition-all ${
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`w-full py-3 rounded-full font-bold transition-all shadow-md ${
                   plan.highlight
                     ? "bg-white text-brand-navy hover:bg-brand-orange hover:text-white"
-                    : "bg-brand-navy text-white hover:bg-brand-orange"
+                    : "bg-brand-navy text-white hover:bg-brand-orange hover:shadow-brand-orange/20"
                 }`}
               >
                 Choisir ce Pack
-              </button>
+              </motion.button>
             </motion.div>
           ))}
         </div>

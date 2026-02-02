@@ -34,27 +34,47 @@ export function ToolsSection() {
           {tools.map((tool, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+              transition={{
+                delay: index * 0.1,
+                duration: 0.5,
+                ease: [0.21, 0.47, 0.32, 0.98],
+              }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 group"
             >
               <div className="flex justify-between items-center mb-4">
-                <span className="font-bold text-brand-navy text-lg">
+                <span className="font-bold text-brand-navy text-lg group-hover:text-brand-orange transition-colors">
                   {tool.name}
                 </span>
                 <span className="font-bold text-brand-orange">
                   {tool.percentage}%
                 </span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+              <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden shadow-inner">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${tool.percentage}%` }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  className={`h-full rounded-full ${tool.color}`}
-                />
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 1.5,
+                    delay: 0.5 + index * 0.1,
+                    ease: "easeOut",
+                  }}
+                  className={`h-full rounded-full ${tool.color} relative overflow-hidden`}
+                >
+                  <motion.div
+                    animate={{ x: ["-100%", "100%"] }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 2,
+                      ease: "linear",
+                    }}
+                    className="absolute inset-0 bg-white/20 skew-x-[-20deg]"
+                  />
+                </motion.div>
               </div>
             </motion.div>
           ))}

@@ -58,35 +58,50 @@ export function BlogSection() {
           {articles.map((article, index) => (
             <motion.article
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 p-6 flex flex-col items-start"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                delay: index * 0.1,
+                duration: 0.6,
+                ease: [0.21, 0.47, 0.32, 0.98],
+              }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 p-8 flex flex-col items-start h-full"
             >
               <div className="flex gap-2 mb-4">
                 {article.tags.map((tag, i) => (
-                  <span
+                  <motion.span
                     key={i}
-                    className="text-xs font-bold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: index * 0.1 + i * 0.1 + 0.3 }}
+                    className="text-[10px] uppercase tracking-wider font-bold text-brand-orange bg-brand-orange/10 px-3 py-1.5 rounded-full"
                   >
                     {tag}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
-              <h3 className="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-orange transition-colors">
+              <h3 className="text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-orange transition-colors duration-300 leading-tight">
                 {article.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed grow">
+              <p className="text-gray-500 text-sm mb-8 leading-relaxed grow">
                 {article.description}
               </p>
 
-              <a
+              <motion.a
                 href="#"
-                className="flex items-center gap-2 text-brand-navy font-bold text-sm hover:gap-3 transition-all mt-auto"
+                whileHover={{ gap: "12px" }}
+                className="flex items-center gap-2 text-brand-navy font-bold text-sm transition-all mt-auto group/link"
               >
-                Lire l'article <ArrowRight size={16} />
-              </a>
+                Lire l'article
+                <motion.div
+                  whileHover={{ x: 3 }}
+                  className="w-8 h-8 rounded-full bg-brand-navy group-hover/link:bg-brand-orange text-white flex items-center justify-center transition-colors"
+                >
+                  <ArrowRight size={14} />
+                </motion.div>
+              </motion.a>
             </motion.article>
           ))}
         </div>

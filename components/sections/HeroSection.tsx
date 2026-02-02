@@ -22,44 +22,80 @@ export function HeroSection() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="inline-block px-4 py-2 bg-brand-navy/5 text-brand-navy rounded-full text-sm font-semibold tracking-wide uppercase border border-brand-navy/10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-block px-4 py-2 bg-brand-navy/5 text-brand-navy rounded-full text-sm font-semibold tracking-wide uppercase border border-brand-navy/10 hover:border-brand-orange/30 hover:bg-brand-orange/5 transition-all duration-300"
+            >
               Bonjour ! Je me nomme Fredy Dieuba
-            </div>
+            </motion.div>
 
-            <h1 className="text-5xl lg:text-5xl font-bold text-brand-navy leading-tight">
-              Lead <span className="text-gradient">Creative Strategist</span>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-5xl lg:text-5xl font-bold text-brand-navy leading-tight"
+            >
+              Lead{" "}
+              <span className="text-gradient animate-shimmer">
+                Creative Strategist
+              </span>
               <br />& Digital Marketer.
-            </h1>
+            </motion.h1>
 
-            <p className="text-xl font-bold text-brand-orange uppercase tracking-wide">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-xl font-bold text-brand-orange uppercase tracking-wide"
+            >
               Co-fondateur de Soluty Agency
-            </p>
+            </motion.p>
 
-            <p className="text-gray-600 text-lg max-w-lg leading-relaxed">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="text-gray-600 text-lg max-w-lg leading-relaxed"
+            >
               Je ne me contente pas de rendre votre entreprise visible ; je la
               rends performante. J'aide les Micro, PME et les entrepreneurs
               ambitieux à transformer leur présence digitale en un véritable
-              moteur d’impact et de croissance stratégique.
-            </p>
+              moteur d'impact et de croissance stratégique.
+            </motion.p>
 
-            <div className="flex flex-wrap gap-4 pt-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="flex flex-wrap gap-4 pt-6"
+            >
               <Link
                 href="#portfolio"
-                className="flex items-center gap-2 bg-brand-navy text-white rounded-full px-8 py-3.5 font-semibold hover:bg-brand-navy/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-navy/20"
+                className="group flex items-center gap-2 bg-brand-navy text-white rounded-full px-8 py-3.5 font-semibold hover:bg-brand-navy/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:shadow-brand-navy/30 relative overflow-hidden"
               >
-                Découvrir mes projets
-                <ArrowRight size={18} />
+                <span className="relative z-10">Découvrir mes projets</span>
+                <ArrowRight
+                  size={18}
+                  className="relative z-10 group-hover:translate-x-1 transition-transform"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-navy to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
 
               <Link
                 href="https://wa.me/237677405562"
                 target="_blank"
-                className="flex items-center gap-2 bg-brand-orange text-white rounded-full px-8 py-3.5 font-semibold hover:bg-brand-orange/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-orange/20"
+                className="group flex items-center gap-2 bg-brand-orange text-white rounded-full px-8 py-3.5 font-semibold hover:bg-brand-orange/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-orange/20 hover:shadow-xl hover:shadow-brand-orange/30 animate-glow relative overflow-hidden"
               >
-                Me contacter
-                <MessageCircle size={18} />
+                <span className="relative z-10">Me contacter</span>
+                <MessageCircle
+                  size={18}
+                  className="relative z-10 group-hover:rotate-12 transition-transform"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-orange to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Right Image */}
