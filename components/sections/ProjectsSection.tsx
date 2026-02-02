@@ -11,42 +11,49 @@ const projects = [
     category: "Agence Événementielle",
     description:
       "Maximiser la performance d'équipe par des packages d'épanouissement.",
-    image: "/part-logo/FUNIFY.png",
+    image: "/section-projet-images/funify.png",
   },
   {
-    title: "NEW SOLUTION STYLE (NSS)",
-    category: "Branding & Couture",
+    title: "SOLUTY AGENCY",
+    category: "Lead Creative Agency",
     description:
-      "Branding complet pour un atelier de haute couture et modélisme.",
-    image: "/part-logo/new-solution-style.jpg",
+      "Développement de solutions digitales et branding stratégique pour PME.",
+    image: "/section-projet-images/SOLUTY-AGENCY.png",
   },
   {
     title: "HMA4S.ATE",
     category: "Stratégie ONG",
     description:
       "Stratégie de communication digitale pour une ONG dédiée au développement.",
-    image: "/part-logo/HMA4s.ate.jpeg",
+    image: "/section-projet-images/Hma4s-ate.png",
   },
   {
-    title: "TRAVELAS",
-    category: "Agence de Voyage",
+    title: "ELITE TRADING",
+    category: "Finance & Trading",
     description:
-      "Identité visuelle et branding pour une agence de voyage moderne.",
-    image: "/part-logo/TRAVELAS.jpg",
+      "Identité visuelle et design d'E-books pour la gestion de capitaux.",
+    image: "/section-projet-images/Elite-tradin.png",
   },
   {
     title: "NEW SAMUEL SHOP ONLINE",
     category: "E-commerce Fashion",
     description:
       "Branding & Identité Visuelle pour une boutique en ligne tendance.",
-    image: "/part-logo/NSSO.png",
+    image: "/section-projet-images/nsso.png",
   },
   {
-    title: "OPTIMA",
-    category: "Identité Visuelle",
+    title: "SOCIAL MEDIA DESIGN",
+    category: "Content Creation",
     description:
-      "Création de logo et identité visuelle pour une marque premium.",
-    image: "/part-logo/optima-logo.png",
+      "Conception graphique et gestion publicitaire pour réseaux sociaux.",
+    image: "/section-projet-images/SOCIAL-MEDIA-DESIGN.png",
+  },
+  {
+    title: "FANNSTUDIO",
+    category: "Creative Agency",
+    description:
+      "Design d'espace et identité visuelle pour un studio de création.",
+    image: "/section-projet-images/Fannstudio 2.png",
   },
 ];
 
