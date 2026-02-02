@@ -48,13 +48,13 @@ const projects = [
       "Conception graphique et gestion publicitaire pour réseaux sociaux.",
     image: "/section-projet-images/SOCIAL-MEDIA-DESIGN.png",
   },
-  {
-    title: "FANNSTUDIO",
-    category: "Creative Agency",
-    description:
-      "Design d'espace et identité visuelle pour un studio de création.",
-    image: "/section-projet-images/Fannstudio 2.png",
-  },
+  // {
+  //   title: "FANNSTUDIO",
+  //   category: "Creative Agency",
+  //   description:
+  //     "Design d'espace et identité visuelle pour un studio de création.",
+  //   image: "/section-projet-images/Fannstudio 2.png",
+  // },
 ];
 
 export function ProjectsSection() {
