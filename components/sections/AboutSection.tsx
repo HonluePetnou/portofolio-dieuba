@@ -160,7 +160,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
               whileHover={{ scale: 1.02 }}
-              className="p-8 rounded-2xl bg-gray-50 border border-gray-100 text-center shadow-md animate-glow"
+              className="p-8 rounded-2xl bg-gray-50 border border-gray-100 text-center animate-glow"
             >
               <div className="text-6xl font-black text-transparent bg-clip-text bg-linear-to-r from-brand-navy to-brand-blue mb-2">
                 100%

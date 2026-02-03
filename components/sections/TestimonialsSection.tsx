@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -9,36 +10,42 @@ const testimonials = [
     client: "Mélanie Maya",
     role: "Directrice, New Solution Style",
     company: "NSS",
+    logo: "/part-logo/NSSO.png",
   },
   {
     text: "Dans le trading, la confiance est tout. Grâce à l'identité visuelle institutionnelle et au design de nos produits numériques créés par Fredy, notre académie a acquis une crédibilité immédiate sur le marché financier.",
     client: "Noé Ketchakeu",
     role: "Fondateur, Elite Trading",
     company: "Elite Trading",
+    logo: "/part-logo/optima-logo.png",
   },
   {
     text: "Porter un message de paix et de développement demande de la clarté. L'audit stratégique et l'architecture digitale de Fredy ont permis à notre ONG d'être enfin audible et visible auprès de nos partenaires internationaux.",
     client: "Njih Hassan",
     role: "Directeur & Fondateur, HMA4S.ATE",
     company: "HMA4S.ATE",
+    logo: "/part-logo/HMA4s.ate.jpeg",
   },
   {
     text: "Notre présence sur les réseaux sociaux manquait de cohérence. Fredy a restructuré tout notre marketing digital avec un design social media qui donne faim et qui convertit nos abonnés en clients fidèles.",
     client: "Suzane Back",
     role: "Co-fondatrice, Yummy Parfait",
     company: "Yummy Parfait",
+    logo: "/part-logo/TRAVELAS.jpg",
   },
   {
     text: "En tant que co-fondateur, Fredy apporte une vision qui dépasse le design. Sa méthode pour packager nos services d'épanouissement en entreprise a été le levier principal de notre croissance cette année.",
     client: "Wagne Daniel",
     role: "Co-fondateur, Funify Event",
     company: "Funify Event",
+    logo: "/part-logo/funify-icon.png",
   },
   {
     text: "La transformation digitale de notre offre de formation a été fluide et sans friction. Fredy ne se contente pas d'exécuter, il anticipe les besoins technologiques de demain. Une expertise rare au Cameroun.",
     client: "Honlue Mussa",
     role: "CEO, Skill Blocks",
     company: "Skill Blocks",
+    logo: "/part-logo/NR_fashion.jpg",
   },
 ];
 
@@ -92,8 +99,13 @@ export function TestimonialsSection() {
               </div>
 
               <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100">
-                <div className="w-10 h-10 rounded-full bg-linear-to-br from-brand-orange to-brand-blue flex items-center justify-center font-bold text-white text-xs">
-                  {item.company.substring(0, 2).toUpperCase()}
+                <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-white border border-gray-200 flex items-center justify-center p-1">
+                  <Image
+                    src={item.logo}
+                    alt={item.company}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h4 className="font-bold text-brand-navy text-sm">

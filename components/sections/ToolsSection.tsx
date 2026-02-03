@@ -1,17 +1,73 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  Figma,
+  Palette,
+  Globe,
+  Workflow,
+  Code2,
+  PenTool,
+  Megaphone,
+  Video,
+  BarChart3,
+} from "lucide-react";
 
 const tools = [
-  { name: "Figma (UI/UX)", percentage: 60, color: "bg-brand-orange" },
-  { name: "Canva", percentage: 90, color: "bg-brand-blue" },
-  { name: "Wordpress & Elementor", percentage: 85, color: "bg-brand-navy" },
-  { name: "N8N", percentage: 50, color: "bg-brand-orange" },
-  { name: "MERN stack", percentage: 60, color: "bg-brand-blue" },
-  { name: "Adobe Suite", percentage: 60, color: "bg-brand-navy" },
-  { name: "Meta Ads & Google Ads", percentage: 90, color: "bg-brand-orange" },
-  { name: "CapCut", percentage: 95, color: "bg-brand-blue" },
-  { name: "Metricool", percentage: 95, color: "bg-brand-navy" },
+  {
+    name: "Figma (UI/UX)",
+    percentage: 60,
+    color: "bg-brand-orange",
+    icon: Figma,
+  },
+  {
+    name: "Canva",
+    percentage: 90,
+    color: "bg-brand-blue",
+    icon: Palette,
+  },
+  {
+    name: "Wordpress & Elementor",
+    percentage: 85,
+    color: "bg-brand-navy",
+    icon: Globe,
+  },
+  {
+    name: "N8N",
+    percentage: 50,
+    color: "bg-brand-orange",
+    icon: Workflow,
+  },
+  {
+    name: "MERN stack",
+    percentage: 60,
+    color: "bg-brand-blue",
+    icon: Code2,
+  },
+  {
+    name: "Adobe Suite",
+    percentage: 60,
+    color: "bg-brand-navy",
+    icon: PenTool,
+  },
+  {
+    name: "Meta Ads & Google Ads",
+    percentage: 90,
+    color: "bg-brand-orange",
+    icon: Megaphone,
+  },
+  {
+    name: "CapCut",
+    percentage: 95,
+    color: "bg-brand-blue",
+    icon: Video,
+  },
+  {
+    name: "Metricool",
+    percentage: 95,
+    color: "bg-brand-navy",
+    icon: BarChart3,
+  },
 ];
 
 export function ToolsSection() {
@@ -46,9 +102,14 @@ export function ToolsSection() {
               className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 group"
             >
               <div className="flex justify-between items-center mb-4">
-                <span className="font-bold text-brand-navy text-lg group-hover:text-brand-orange transition-colors">
-                  {tool.name}
-                </span>
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-white shadow-sm text-brand-navy group-hover:text-brand-orange transition-colors">
+                    <tool.icon size={24} strokeWidth={1.5} />
+                  </div>
+                  <span className="font-bold text-brand-navy text-lg group-hover:text-brand-orange transition-colors">
+                    {tool.name}
+                  </span>
+                </div>
                 <span className="font-bold text-brand-orange">
                   {tool.percentage}%
                 </span>

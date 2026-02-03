@@ -6,8 +6,8 @@
   --color-brand-navy: #060537;
   --color-brand-light: #ffffff;
 
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
 }
 
 :root {
@@ -55,14 +55,16 @@ body {
 }
 
 .text-gradient {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(
-    135deg,
+  background: linear-gradient(
+    to right,
     var(--brand-orange),
-    var(--brand-blue)
+    var(--brand-blue),
+    var(--brand-orange)
   );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
 }
 
 .section-padding {

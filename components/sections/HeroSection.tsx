@@ -38,7 +38,7 @@ export function HeroSection() {
               className="text-5xl lg:text-5xl font-bold text-brand-navy leading-tight"
             >
               Lead{" "}
-              <span className="text-gradient animate-shimmer">
+              <span className="text-gradient font-bold">
                 Creative Strategist
               </span>
               <br />& Digital Marketer.
@@ -48,7 +48,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-xl font-bold text-brand-orange uppercase tracking-wide"
+              className="text-xl font-bold text-brand-blue uppercase tracking-wide"
             >
               Co-fondateur de Soluty Agency
             </motion.p>
@@ -106,8 +106,8 @@ export function HeroSection() {
             className="relative flex justify-center items-center"
           >
             {/* Abstract Background Shapes */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-blue/80 rounded-full animate-pulse" />
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-brand-orange/90 rounded-full" />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-orange/80 rounded-full animate-pulse" />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-brand-blue/90 rounded-full" />
 
             {/* Profile Image Container */}
             <div className="relative z-10 w-[350px] lg:w-[420px] aspect-4/5 rounded-[2rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500 glass-panel p-2">
@@ -127,7 +127,7 @@ export function HeroSection() {
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               className="absolute top-10 -right-4 lg:-right-8 glass-card p-4 rounded-xl flex items-center gap-3 shadow-xl backdrop-blur-md bg-white/10 z-30 border border-white/20"
             >
-              <div className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+              <div className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold shadow-lg">
                 8+
               </div>
               <div className="text-sm font-semibold text-brand-navy">
@@ -147,7 +147,7 @@ export function HeroSection() {
               }}
               className="absolute bottom-20 -left-8 lg:-left-12 glass-card p-4 rounded-xl flex items-center gap-3 shadow-xl backdrop-blur-md bg-white/10 z-30 border border-white/20"
             >
-              <div className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+              <div className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center text-white font-bold shadow-lg">
                 100%
               </div>
               <div className="text-sm font-semibold text-brand-navy">

@@ -4,10 +4,10 @@ export function Footer() {
       <div className="container mx-auto px-8 md:px-24 lg:px-40">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-2xl font-bold flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-orange text-white font-bold">
-              F
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-orange text-white text-lg font-bold">
+              FD
             </div>
-            Fredy.
+            Fredy Dieuba.
           </div>
 
           <div className="flex gap-8 text-sm text-gray-300">
